@@ -1,0 +1,11 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "revisionCountLimit": {
+      "description": "How many revisions for each item should be stored in the database",
+      "type": "number",
+      "default": 100
+    }
+  }
+}
