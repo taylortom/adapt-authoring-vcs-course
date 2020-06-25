@@ -6,5 +6,8 @@
   "main": "index.js",
   "peerDependencies": {
     "adapt-authoring-core": "github:adapt-security/adapt-authoring-core"
+  },
+  "dependencies": {
+    "jsondiffpatch": "0.4.1"
   }
 }
