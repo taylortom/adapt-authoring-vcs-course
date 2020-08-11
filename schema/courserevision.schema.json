@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "description": "An Adapt course build instance",
+  "type": "object",
+  "properties": {
+    "itemId": {
+      "description": "_id of the item being the revision applies to",
+      "type": "string",
+      "isObjectId": true
+    },
+    "itemCollection": {
+      "description": "The database collection that the target item can be found in",
+      "type": "string"
+    },
+    "action": {
+      "description": "The action being performed",
+      "type": "string",
+      "enum": ["insert", "update", "replace", "delete"]
+    },
+    "changes": {
+      "description": "Differential outlining the revision changes",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "diff": {
+            "description": "Differential outlining the revision changes",
+            "type": "object"
+          },
+          "target": {
+            "description": "Content object that the revision applies to",
+            "type": "object",
+            "properties": {
+              "_id": {
+                "description": "_id for the target item",
+                "type": "string",
+                "isObjectId": true
+              },
+              "type": {
+                "description": "_type of the target item",
+                "type": "string"
+              },
+              "collection": {
+                "description": "MongoDB collection the item is stored in",
+                "type": "string"
+              }
+            },
+            "required": ["_id", "type", "collection"]
+          }
+        }
+      }
+    },
+    "timestamp": {
+      "description": "Timestamp for when the revision was created",
+      "type": "string",
+      "format": "date-time",
+      "isDate": true
+    }
+  },
+  "required": ["itemId", "itemCollection", "action", "changes", "timestamp"]
+}
