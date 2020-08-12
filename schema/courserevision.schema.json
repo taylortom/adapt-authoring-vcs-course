@@ -25,7 +25,7 @@
         "properties": {
           "diff": {
             "description": "Differential outlining the revision changes",
-            "type": "object"
+            "type": ["array", "object"]
           },
           "target": {
             "description": "Content object that the revision applies to",
