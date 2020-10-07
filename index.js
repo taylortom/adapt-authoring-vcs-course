@@ -1,1 +1,1 @@
-module.exports = require('./lib/vcsCourseModule');
+module.exports = require('./lib/VcsCourseModule');
