@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
+  "$anchor": "courserevision",
   "description": "An Adapt course build instance",
   "type": "object",
   "properties": {
