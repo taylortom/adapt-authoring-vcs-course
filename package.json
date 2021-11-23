@@ -10,6 +10,6 @@
     "jsondiffpatch": "0.4.1"
   },
   "peerDependencies": {
-    "adapt-authoring-core": "adapt-security/adapt-authoring-core"
+    "adapt-authoring-core": "github:adapt-security/adapt-authoring-core"
   }
 }
