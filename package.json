@@ -2,10 +2,10 @@
   "name": "adapt-authoring-vcs-course",
   "version": "0.0.1",
   "description": "Adds VCS functionality to Adapt course content",
-  "homepage": "https://github.com/adaptlearning/adapt-authoring-vcs-course",
+  "homepage": "https://github.com/adapt-security/adapt-authoring-vcs-course",
   "license": "GPL-3.0",
   "main": "index.js",
-  "repository": "adaptlearning/adapt-authoring-vcs-course",
+  "repository": "github:adapt-security/adapt-authoring-vcs-course",
   "dependencies": {
     "jsondiffpatch": "0.4.1"
   },
