@@ -4,6 +4,7 @@
   "description": "Adds VCS functionality to Adapt course content",
   "homepage": "https://github.com/adapt-security/adapt-authoring-vcs-course",
   "license": "GPL-3.0",
+  "type": "module",
   "main": "index.js",
   "repository": "github:adapt-security/adapt-authoring-vcs-course",
   "dependencies": {
