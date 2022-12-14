@@ -1,1 +1,1 @@
-module.exports = require('./lib/VcsCourseModule');
+export { default } from './lib/VcsCourseModule.js';
