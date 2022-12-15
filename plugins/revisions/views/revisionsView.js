@@ -9,9 +9,11 @@ define(function(require){
       'click button[data-sort]': 'onSortClick'
     },
 
-    initialize: function() {
-      OriginView.prototype.initialize.apply(this, arguments);
-      Origin.trigger('location:title:update', { title: Origin.l10n.t('app.usermanagementtitle') });
+    initialize: function(options) {
+      OriginView.prototype.initialize.call(this, options);
+      console.log(options);
+      Origin.trigger('location:title:update', { title: Origin.l10n.t('app.revisionstitle') });
+      Origin.trigger('sidebar:sidebarContainer:hide');
       this.render();
     },
 

@@ -1,7 +1,7 @@
 define(function(require) {
+  var ApiCollection = require('core/collections/apiCollection');
   var Origin = require('core/origin');
   var RevisionsView = require('./views/revisionsView');
-  var RevisionsSidebarView = require('./views/revisionsSidebarView');
 
   var scopes = ["write:revisions"];
 
@@ -18,7 +18,6 @@ define(function(require) {
   });
 
   Origin.on('router:revisions', function(location, subLocation, action) {
-    Origin.contentPane.setView(RevisionsView, { model, collection: userCollection });
-    Origin.sidebar.addView(new RevisionsSidebarView({ model, collection: new ApiCollection() }).$el);
+    Origin.contentPane.setView(RevisionsView, { collection: new ApiCollection(null, { url: '/api/revisions' }) });
   });
 });
