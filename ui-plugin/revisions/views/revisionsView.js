@@ -1,24 +1,23 @@
 // LICENCE https://github.com/adaptlearning/adapt_authoring/blob/master/LICENSE
 define(function(require){
+  var ApiCollection = require('core/collections/apiModel');
   var Origin = require('core/origin');
   var OriginView = require('core/views/originView');
 
   var RevisionsView = OriginView.extend({
     className: 'revisions',
-    events: {
-      'click button[data-sort]': 'onSortClick'
-    },
-
+    settings: { autoRender: false },
+    
     initialize: function(options) {
       OriginView.prototype.initialize.call(this, options);
       console.log(options);
-      Origin.trigger('location:title:update', { title: Origin.l10n.t('app.revisionstitle') });
-      Origin.trigger('sidebar:sidebarContainer:hide');
-      this.render();
-    },
+     
+      this.model = new Backbone.Model({ 
+        revisions: new ApiCollection(undefined, { url: 'api/revisions' }) 
+      });
+      this.model.on('change', this.render, this);
 
-    render: function() {
-      OriginView.prototype.render.apply(this, arguments);
+      this.model.get('revisions').fetch();
     }
   }, {
     template: 'revisions'

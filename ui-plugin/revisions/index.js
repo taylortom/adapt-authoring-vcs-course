@@ -18,6 +18,10 @@ define(function(require) {
   });
 
   Origin.on('router:revisions', function(location, subLocation, action) {
+    Origin.contentHeader.setTitle({ 
+      breadcrumbs: [{ title: 'Revisions' }], 
+      title: 'View course revisions' 
+    });
     Origin.contentPane.setView(RevisionsView, { collection: new ApiCollection(null, { url: '/api/revisions' }) });
   });
 });
