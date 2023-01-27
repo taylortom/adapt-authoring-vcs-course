@@ -1,5 +1,6 @@
 // LICENCE https://github.com/adaptlearning/adapt_authoring/blob/master/LICENSE
 define(function(require){
+  var Backbone = require('backbone');
   var ApiCollection = require('core/collections/apiModel');
   var Origin = require('core/origin');
   var OriginView = require('core/views/originView');
