@@ -17,6 +17,10 @@ define(function(require){
       });
       this.model.on('change', this.render, this);
 
+      this.fetch();
+    },
+    
+    fetch: function() {
       this.model.get('revisions').fetch();
     }
   }, {
