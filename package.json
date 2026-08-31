@@ -8,7 +8,7 @@
   "main": "index.js",
   "repository": "github:adapt-security/adapt-authoring-vcs-course",
   "dependencies": {
-    "jsondiffpatch": "0.4.1"
+    "jsondiffpatch": "0.7.6"
   },
   "peerDependencies": {
     "adapt-authoring-core": "github:adapt-security/adapt-authoring-core"
